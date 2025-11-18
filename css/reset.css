@@ -1,0 +1,102 @@
+/*
+  Reset CSS — baseado no "Modern CSS Reset" de Andy Bell
+  Fonte de inspiração: https://github.com/andybell/modern-css-reset
+  Objetivo: remover estilos padrões do navegador e fornecer uma base consistente.
+*/
+
+/* Box sizing mais previsível */
+:root {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Remover margens/paddings padrões */
+:where(html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+address, big, cite, code, del, dfn, em, img, ins, kbd, q, s,
+samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, video, figure,
+figcaption) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Elementos HTML5 exibidos como bloco por compatibilidade */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Configurações globais úteis */
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Remover bullets padrão */
+ol, ul {
+  list-style: none;
+}
+
+/* Reset para quotes */
+blockquote, q {
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: '';
+  content: none;
+}
+
+/* Imagens e mídia mais previsíveis */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Inputs herdam fonte */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Links sem decoração por padrão */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Prevent tap highlight on mobile */
+:where(:not(svg)) > * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Quebra de palavras em títulos e parágrafos */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Acessibilidade: foco visível (modificável pela base do projeto) */
+:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* Defina estilos adicionais do projeto após este arquivo */
